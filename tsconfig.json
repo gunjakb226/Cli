@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 14",
+  "_version": "14.1.0",
+
+  "compilerOptions": {
+    "lib": ["es2020"],
+    "module": "node16",
+    "target": "es2020",
+    "outDir": "./dist",
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "noUncheckedIndexedAccess": true
+  },
+  "include": ["src"]
+}

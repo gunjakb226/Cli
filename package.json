@@ -1,0 +1,26 @@
+{
+  "name": "CLI",
+  "bin": {
+    "practice": "./dist/index.js"
+  },
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "link": "npm link --local",
+    "unlink": "npm unlink"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "xlsx": "^0.18.5"
+  }
+}

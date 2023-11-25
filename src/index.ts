@@ -16,6 +16,7 @@ program
     try {
       const workbook = XLSX.readFile(process.env.TEMPsomething);
       console.log(workbook);
+      console.log("hello Wordlfjlasdfkljasdfsdkfjlkdasflkj")
     } catch (e: any) {
       console.log(e);
     }

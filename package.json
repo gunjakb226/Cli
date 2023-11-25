@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsc -w",
     "link": "npm link --local",
-    "unlink": "npm unlink"
+    "unlink": "npm unlink --global"
   },
   "keywords": [],
   "author": "",

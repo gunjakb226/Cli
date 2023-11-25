@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv").config();
 const { program } = require("commander");
-var XLSX = require("xlsx");
+const XLSX = require("xlsx");
 program
     .description("Add commit to excel file mentioned in the process.env")
     .arguments("<string>", "something to do")
@@ -11,7 +11,9 @@ program
     .action((message, opts) => {
     try {
         const workbook = XLSX.readFile(process.env.TEMPsomething);
-        console.log(workbook);
+        const sheet = workbook.Sheets["Sheet1"];
+        const table = XLSX.utils.sheet_to_json(sheet);
+        console.log(table);
     }
     catch (e) {
         console.log(e);

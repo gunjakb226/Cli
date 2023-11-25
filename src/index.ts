@@ -5,7 +5,6 @@ import * as fs from "fs";
 
 const { program } = require("commander");
 
-
 var XLSX = require("xlsx");
 
 program
@@ -14,9 +13,9 @@ program
   .option("-c", "--capitalize", "Capitalize the message")
   .action((message: string, opts: { c: boolean }) => {
     try {
+
       const workbook = XLSX.readFile(process.env.TEMPsomething);
-      console.log(workbook);
-      console.log("hello Wordlfjlasdfkljasdfsdkfjlkdasflkj")
+      console.log(workbook.Sheets);
     } catch (e: any) {
       console.log(e);
     }

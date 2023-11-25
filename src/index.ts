@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 require("dotenv").config();
-import { Readable } from "stream";
-import * as fs from "fs";
 
 const { program } = require("commander");
 
-var XLSX = require("xlsx");
+const XLSX = require("xlsx");
 
 program
   .description("Add commit to excel file mentioned in the process.env")
@@ -13,11 +11,12 @@ program
   .option("-c", "--capitalize", "Capitalize the message")
   .action((message: string, opts: { c: boolean }) => {
     try {
-
       const workbook = XLSX.readFile(process.env.TEMPsomething);
-      console.log(workbook.Sheets);
+      const sheet = workbook.Sheets["Sheet1"];
+      const table = XLSX.utils.sheet_to_json(sheet);
+      console.log(table)
     } catch (e: any) {
-      console.log(e);
+      console.log(e)
     }
   });
 program.parse(process.argv);

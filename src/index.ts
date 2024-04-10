@@ -30,3 +30,5 @@ const cheeseStr = options.capitalize ? "no cheese" : `${"some"} cheese`;
 const a = "hello world";
 
 const test = "Too much thinking";
+
+("main");

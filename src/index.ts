@@ -26,3 +26,5 @@ const sauceStr = options.capitalize ? "sauce" : "no sauce";
 const cheeseStr = options.capitalize ? "no cheese" : `${"some"} cheese`;
 
 const test = "Too much thinking";
+
+("testone");

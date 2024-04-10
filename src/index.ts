@@ -14,9 +14,9 @@ program
       const workbook = XLSX.readFile(process.env.TEMPsomething);
       const sheet = workbook.Sheets["Sheet1"];
       const table = XLSX.utils.sheet_to_json(sheet);
-      console.log(table.length)
+      console.log(table.length);
     } catch (e: any) {
-      console.log(e)
+      console.log(e);
     }
   });
 program.parse(process.argv);
@@ -24,3 +24,5 @@ program.parse(process.argv);
 const options = program.opts();
 const sauceStr = options.capitalize ? "sauce" : "no sauce";
 const cheeseStr = options.capitalize ? "no cheese" : `${"some"} cheese`;
+
+const a = "hello world";
